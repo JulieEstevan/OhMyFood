@@ -1,0 +1,15 @@
+@import "utils/variables";
+@import "layout/header";
+@import "layout/footer";
+@import "utils/mixins";
+
+* {
+    font-family: 'roboto', sans-serif;
+}
+
+.main-container {
+    min-width: 375px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
