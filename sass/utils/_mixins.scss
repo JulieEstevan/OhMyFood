@@ -1,0 +1,9 @@
+@mixin button {
+    background: $button-color-gradient;
+    color: white;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    font-size: 16px;
+    padding: 16px 22px;
+    border-radius: 25px;
+    border: none;
+}

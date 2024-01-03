@@ -2,9 +2,13 @@
 @import "layout/header";
 @import "layout/footer";
 @import "utils/mixins";
+@import "pages/home.scss";
+@import "pages/restaurants.scss";
 
 * {
     font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .main-container {
