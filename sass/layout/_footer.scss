@@ -1,0 +1,40 @@
+.footer {
+    background-color: $color-darkgrey;
+    color: white;
+    padding: 22px 25px;
+    @media (min-width: 980px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 50px 50px 10px 0px;
+    }
+    &__title {
+        font-family: shrikhand;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        @media (min-width: 980px) {
+            margin-left: 50px;
+        }
+    }
+    &__list {
+        list-style: none;
+        @media (min-width: 980px) {
+            display: flex;                       
+        }
+        &--link {
+            padding-bottom: 7px;
+            @media (min-width: 980px) {
+                margin-right: 20px;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+                i {
+                    width: 20px;
+                    padding-right: 6px;
+                }
+            }
+        }
+    }
+}
