@@ -6,4 +6,10 @@
     padding: 16px 22px;
     border-radius: 25px;
     border: none;
+    text-decoration: none;
+
+    &__restaurant {
+        padding: 16px 49px;
+        cursor: pointer;
+    }
 }

@@ -8,6 +8,7 @@
         align-items: center;
         padding: 50px 50px 10px 0px;
     }
+
     &__title {
         font-family: shrikhand;
         font-size: 18px;
@@ -37,4 +38,9 @@
             }
         }
     }
+}
+
+.footer-restaurant {
+    position: relative;
+    top: 205px;
 }
