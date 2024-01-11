@@ -13,14 +13,32 @@
     top: 205px;
 
     &__title {
-        margin: 0px 28px 0px 4px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        margin: 0px 4px;
 
-        h1 {font-family: shrikhand; 
+        h1 {
+            font-family: shrikhand; 
             font-size: 28px; 
-            font-weight: 400;}
+            font-weight: 400;
+        }
+
+        &--heart, &--heartfill {
+            display: flex;
+            align-items: center;
+            height: 24px;
+            position: absolute;
+            right: 48px;
+            top: 42px;
+        }
+
+        &--heartfill {
+            background: $heart-color-gradient;
+            color: transparent;
+            -webkit-background-clip: text;
+            opacity: 0;
+            &:hover {
+                animation: heart-fill-restaurant 400ms both;
+            }
+        }
     }
 
     .section-title {

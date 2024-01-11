@@ -13,11 +13,13 @@
     background-color: $background-color-lightgrey;
     text-align: center;
     padding-bottom: 56px;
+
     &__title {
         font-size: 24px;
         margin: 0px 23px;
         padding: 38px 42px 16px 42px;
     }
+
     &__info {
         color: $color-darkgrey;
         font-size: 18px;
@@ -27,6 +29,7 @@
 
 .fonctionnement {
     margin: 48px 0px;
+
     &__title {
         margin: $home-section-title;
         @media (min-width: 1440px) {
@@ -49,6 +52,7 @@
         background-color: $background-color-lightgrey;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px #00000026;
+
             .number {
                 position: absolute;
                 background-color: $primary-color;
@@ -57,6 +61,7 @@
                 border-radius: 100%;
                 left: -12px;
             }
+
             .icon {
                 padding: 0px 20px 0px 35px;
                 width: 18px;
@@ -70,10 +75,12 @@
 .restaurants {
     padding: 48px 0px;
     background-color: $background-color-lightgrey;
+
     &__title {
         margin: $home-section-title;
         padding-bottom: 10px;
         text-align: left;
+
         @media (min-width: 1440px) {
             margin: 0px 180px;
         }
@@ -83,11 +90,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         @media (min-width: 980px) {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
+
         @media (min-width: 1440px) {
             margin: 0px 180px;
             display: flex;
@@ -96,23 +105,28 @@
         }
 
         &--link {
+            position: relative;
             text-decoration: none;
             color: inherit;
             width: 100%;
             max-width: 490px;
-            padding: 9px 20px;
+            box-shadow: 0px 4px 15px 0px #0000001A;
+            border-radius: 15px;
+            margin: 9px 20px;
+
             @media (min-width: 980px) {
-                padding: 25px 20px;
+                margin: 25px 20px;
             }
+
             @media (min-width: 1440px) {
-                padding: 25px 0px;
+                margin: 25px 0px;
             }
         }
+        
         .card {
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px 0px #0000001A;
-            z-index: initial;
-            position: relative;
+            text-decoration: none;
+            color: black;
+
             &__image {
                 display: flex;
                 width: 100%;
@@ -120,38 +134,60 @@
                 object-fit: cover;
                 align-items: center;
                 border-radius: 15px 15px 0px 0px;
+
             }
-            &__new {
-                position: absolute;
-                width: 80px;
-                top: 10px;
-                left: 72%;
-                text-align: center;
-                object-position: 10px;
-                padding: 6px 0px;
-                border-radius: 2px;
-                font-size: 14px;
-                color: $color-green;
-                background-color: $tertiary-color;
-                @media (min-width:530px) {
-                    left: 395px;
-                }
-             }
+
             &__content {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                flex-direction: column;
                 padding: 16px 24px 16px 16px;
                 border-radius: 0px 0px 15px 15px;
                 background-color: white;
-                h3 {
+
+                &--title {
                     font-size: 18px;
                     padding-bottom: 5px;
                 }
-                p {
+
+                &--text {
                     font-size: 17px;
                 }
+
+                &--heart, &--heartfill {
+                    display: flex;
+                    align-items: center;
+                    height: 24px;
+                    position: absolute;
+                    bottom: 25px;
+                    right: 24px;
+                }
+
+                &--heartfill {
+                    background: $heart-color-gradient;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    &:hover {
+                        animation: heart-fill-home 400ms both;
+                    }
+                }
             }
+        }
+
+        .cardnew::before {
+            content: "Nouveau";
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            width: 80px;
+            padding: 5px 0px;
+            color: $color-green;
+            background-color: $tertiary-color;
+            text-align: center;
+            border-radius: 2px;
+            font-size: 14px;
+            right: 10px;
+            top: 10px;
         }
     }
 }
