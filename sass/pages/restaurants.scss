@@ -22,11 +22,12 @@
         }
 
         &--heart, &--heartfill {
+            cursor: pointer;
             display: flex;
             align-items: center;
             height: 24px;
             position: absolute;
-            right: 48px;
+            right: 40px;
             top: 42px;
         }
 
