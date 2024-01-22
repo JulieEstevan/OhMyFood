@@ -50,10 +50,11 @@
         &--heartfill {
             background: $heart-color-gradient;
             color: transparent;
+            background-clip: text;
             -webkit-background-clip: text;
             opacity: 0;
-            &:hover {
-                transition: 500ms;
+            transition: opacity 500ms ease-in;
+            &:hover {             
                 opacity: 1;
             }
         }
@@ -92,7 +93,28 @@
             box-shadow: 0px 4px 15px 0px #0000001A;
             margin-bottom: 12px;
             gap: 5px;
-            &:hover {
+            transition: all 0.5s ease-in;
+
+            &::after {
+                content: "\f058";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 600;
+                font-size: 20px;
+                color: $color-white;
+                background-color: $tertiary-color;
+                overflow: hidden;
+                opacity: 0;
+                width: 0px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border-radius: 0px 15px 15px 0px;
+                transition: inherit;             
+            }
+
+            &:hover {                 
                 &::after {
                     content: "\f058";
                     font-family: "Font Awesome 6 Free";
@@ -101,6 +123,7 @@
                     color: $color-white;
                     background-color: $tertiary-color;
                     overflow: hidden;
+                    opacity: 1;
                     width: 100px;
                     height: 75px;
                     display: flex;
@@ -108,10 +131,10 @@
                     align-items: center;
                     position: relative;
                     border-radius: 0px 15px 15px 0px;
-                    animation: check 500ms;
+                    transition: inherit;         
                 }
             }
-
+                
              &--content {
                 display: flex;
                 flex-direction: column;
@@ -153,66 +176,66 @@
 .fade-in {
     &__1 {
         opacity: 0;
-        animation: fade-in 0.3s 800ms ease-in-out forwards;
+        animation: fade-in 0.3s 200ms ease-in-out forwards;
     }
 
     &__2 {
         opacity: 0;
-        animation: fade-in 0.3s 950ms ease-in-out forwards;
+        animation: fade-in 0.3s 350ms ease-in-out forwards;
     }
 
     &__3 {
         opacity: 0;
-        animation: fade-in 0.3s 1100ms ease-in-out forwards;
+        animation: fade-in 0.3s 500ms ease-in-out forwards;
     }
 
     &__4 {
         opacity: 0;
-        animation: fade-in 0.3s 1250ms ease-in-out forwards;
+        animation: fade-in 0.3s 650ms ease-in-out forwards;
     }
 
     &__5 {
         opacity: 0;
-        animation: fade-in 0.3s 1400ms ease-in-out forwards;
+        animation: fade-in 0.3s 800ms ease-in-out forwards;
     }
 
     &__6 {
         opacity: 0;
-        animation: fade-in 0.3s 1550ms ease-in-out forwards;
+        animation: fade-in 0.3s 950ms ease-in-out forwards;
     }
 
     &__7 {
         opacity: 0;
-        animation: fade-in 0.3s 1700ms ease-in-out forwards;
+        animation: fade-in 0.3s 1100ms ease-in-out forwards;
     }
 
     &__8 {
         opacity: 0;
-        animation: fade-in 0.3s 1850ms ease-in-out forwards;
+        animation: fade-in 0.3s 1250ms ease-in-out forwards;
     }
 
     &__9 {
         opacity: 0;
-        animation: fade-in 0.3s 2000ms ease-in-out forwards;
+        animation: fade-in 0.3s 1400ms ease-in-out forwards;
     }
 
     &__10 {
         opacity: 0;
-        animation: fade-in 0.3s 2150ms ease-in-out forwards;
+        animation: fade-in 0.3s 1550ms ease-in-out forwards;
     }
 
     &__11 {
         opacity: 0;
-        animation: fade-in 0.3s 2300ms ease-in-out forwards;
+        animation: fade-in 0.3s 1700ms ease-in-out forwards;
     }
 
     &__12 {
         opacity: 0;
-        animation: fade-in 0.3s 2450ms ease-in-out forwards;
+        animation: fade-in 0.3s 1850ms ease-in-out forwards;
     }
 
     &__13 {
         opacity: 0;
-        animation: fade-in 0.3s 2600ms ease-in-out forwards;
+        animation: fade-in 0.3s 2000ms ease-in-out forwards;
     }
 }

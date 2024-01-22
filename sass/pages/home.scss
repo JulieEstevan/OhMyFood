@@ -114,6 +114,12 @@
             border-radius: 15px;
             margin: 9px 20px;
 
+            span {
+                position: absolute;
+                bottom: 25px;
+                right: 10px;
+            }
+
             @media (min-width: 980px) {
                 margin: 25px 20px;
             }
@@ -157,19 +163,17 @@
                     cursor: pointer;
                     display: flex;
                     align-items: center;
-                    height: 24px;
-                    position: absolute;
-                    bottom: 25px;
-                    right: 24px;
                 }
-
+        
                 &--heartfill {
                     background: $heart-color-gradient;
                     color: transparent;
+                    background-clip: text;
                     -webkit-background-clip: text;
                     opacity: 0;
-                    &:hover {
-                        animation: heart-fill 400ms both;
+                    transition: opacity 500ms ease-in;
+                    &:hover {             
+                        opacity: 1;
                     }
                 }
             }
