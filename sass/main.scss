@@ -53,17 +53,17 @@
                 content: "";
                 width: 250px;
                 padding: 8px;
-                aspect-ratio: 1;
+                aspect-ratio: 1 / 1;
                 border-radius: 50%;
                 background: $color-white;
-                --_m: 
+                --m: 
                 conic-gradient(#ffffff00 10%,#ffffff),
-                linear-gradient(#ffffff 0 0) content-box;
-                -webkit-mask: var(--_m);
-                        mask: var(--_m);
+                linear-gradient(#ffffff 0 0, #ffffff 0 0) content-box;
+                -webkit-mask: var(--m);
+                        mask: var(--m);
                 -webkit-mask-composite: source-out;
                         mask-composite: subtract;
-                animation: l3 1s infinite linear;
+                animation: loader1 1s infinite linear;
             }
         }
     }
