@@ -211,9 +211,12 @@
   border-radius: 15px;
   margin: 9px 20px;
 }
-.restaurants__cards--link span {
+.restaurants__cards--link button {
+  border: none;
+  background: none;
+  font-size: 16px;
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   right: 10px;
 }
 @media (min-width: 980px) {
@@ -327,10 +330,18 @@
     padding-right: 40px;
   }
 }
+.restaurant__title button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  position: relative;
+  bottom: 16px;
+}
 .restaurant__title--heart, .restaurant__title--heartfill {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .restaurant__title--heartfill {
   background: linear-gradient(#9356DC, #FF79DA 90%);
